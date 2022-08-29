@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Rotaract Club 2022-23</title>
+
+    <link rel="shortcut icon" href="./img/ppt logo2.png">
+    <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+        .about-span {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-image: url("img/about-span-bg.png");
+            margin: 2%;
+            font-weight: bold;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .about-span p{
+            opacity: 0.75;
+        }
+        .card {
+            position: relative;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            padding: 0%;
+            top: 0;
+            transition: top ease 0.5s;
+        }
+
+        .card:hover {
+            top: -15px;
+        }
+
+        @media screen and (min-width: 951px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card {
+                margin: 5em 2em;
+                width: calc(100%/3);
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #000000;
+                width: 7vh;
+                height: 7vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card {
+                margin: 5em 2em;
+                width: calc(100%/2);
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #000000;
+                width: 7vh;
+                height: 7vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card:not(:first-child) {
+                display: none;
+            }
+
+            .card {
+                margin: 3em 2em;
+                width: calc(100%/1.5);
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #000000;
+                width: 3vh;
+                height: 3vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        @media screen and (max-width: 492px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card:not(:first-child) {
+                display: none;
+            }
+
+            .card {
+                margin: 3em 2em;
+                width: 100%;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #000000;
+                width: 3vh;
+                height: 3vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            animation: fadein 2s;
+        }
+
+        h1 span {
+            font-family: 'Caesar Dressing', cursive;
+            font-size: 1.25em;
+            cursor: pointer;
+            text-transform: uppercase;
+            vertical-align: middle;
+            letter-spacing: .2em;
+        }
+
+        .fire {
+            animation: animation 1s ease-in-out infinite alternate;
+            -moz-animation: animation 1s ease-in-out infinite alternate;
+            -webkit-animation: animation 1s ease-in-out infinite alternate;
+            -o-animation: animation 1s ease-in-out infinite alternate;
+        }
+
+        .burn {
+            animation: animation .65s ease-in-out infinite alternate;
+            -moz-animation: animation .65s ease-in-out infinite alternate;
+            -webkit-animation: animation .65s ease-in-out infinite alternate;
+            -o-animation: animation .65s ease-in-out infinite alternate;
+        }
+
+        @keyframes animation {
+            0% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px #973716;
+            }
+        }
+
+        @-moz-keyframes animation {
+            0% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px #973716;
+            }
+        }
+
+        @-webkit-keyframes animation {
+            0% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px #973716;
+            }
+        }
+
+        @-o-keyframes animation {
+            0% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px #973716;
+            }
+        }
+
+        .row-content {
+            border: none;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .card-header {
+            background-color: #391285;
+            color: white;
+        }
+
+        .card-body {
+            background-color: #FEFEFE;
+            padding: 0%;
+        }
+
+        .events {
+            border: none;
+        }
+
+        .event-img {
+            border-radius: 2rem;
+            margin-top: 0%;
+        }
+
+        .event-img,
+        .events-col {
+            padding: 0%;
+        }
+
+        .theme-col {
+            border-radius: 2rem;
+        }
+
+        .btn-success {
+            margin-bottom: 2%;
+        }
+
+        .btn-primary {
+            margin-bottom: 2%;
+        }
+
+        .home-head {
+            position: relative;
+            padding: 15%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            z-index: 1;
+            font-weight: 1200;
+            font-size: 70px;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, gold, rgb(224, 179, 125));
+            background-repeat: round;
+            background-size: 80%;
+            animation: animate 7s infinite;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        }
+
+        h2 {
+            animation: fadein 1s;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(200px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes animate {
+            100% {
+                background-position: 500%;
+            }
+        }
+
+        @keyframes slide-right {
+            from {
+                margin-right: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-right: 0%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" href="#" style="margin-left: 3%;"><img src="./img/ppt logo.png" height="60" width="60"></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./report.html">Report</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="q">
+        <canvas id="canvas"></canvas>
+        <h1 class="home-head">Rotaract Club<br>2022-23</h1>
+    </div>
+
+    <div class="container">
+        <div style="margin-top: 18%;">
+            <h1><span style="color: rgb(0, 0, 0);" class="fire">K</span><span style="color: rgb(40, 0, 0);" class="burn">A</span><span style="color: rgb(65, 0, 0);" class="burn">I</span><span style="color: rgb(92, 0, 0);" class="fire">Z</span></span><span style="color: rgb(109, 0, 0);" class="fire">E</span></span><span style="color: rgb(128, 0, 0);" class="fire">N</span></h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="theme-col col-7" style="background-image: url(img/theme-bg3.png); margin: 2%;">
+                <p style="font-weight: bold; font-size: large; justify-content: center;">
+                    The Rotaract Club of CRCE has been an integral part of Fr.CRCE. Our theme for the year 2022-2023<span style="text-align: center; padding-top: 1%; color: maroon; text-shadow: 2px 2px rgb(224, 192, 152);;">
+                    Kaizen</span> helped us hussle for the continuous improvement within us and do what we do best as Rotaractors.We work along the motto <span style="color: maroon;">Change For Better</span>.
+                </p>
+            </div>
+        </div>
+        <div class="col-12">
+            <h2 class="about-div">About Us</h2>
+            <div class="row row-content justify-content-center" style="border: none;">
+                <div class="row justify-content-center" style="margin-bottom: 5%;">
+                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkmagenta;">20+</span><br>Events Organised</p></span>
+                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkgreen">2000+</span><br>People Connected</p></span>
+                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkblue">200+</span><br>Donations To Councils</p></span>
+                </div>
+                <p class="col-10" style="font-size:large;">The purpose of Rotaract is to provide an opportunity for young men and woman to enhance the knowledge and skills that will assist them in personal development, to address the physical and social needs of their communities, and to promote better relationships between all people worldwide, through a framework of friendship and service..<a href="./AboutUs.html" style="font-weight: bold; color: gray; text-decoration: none;">Read More</a></p>
+            </div>
+        </div>
+        <div class="row row-content justify-content-center">
+            <div class="col-12">
+                <h2>Events</h2>
+            </div>
+            <div class="col-10">
+                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/community-serv-bg.png);">
+                    <img class="event-img col-12 col-sm-6" src="img/commuity service.jpg" alt="" height="380px">
+                    <div class="events-col col-12 col-sm-6" style="text-align: center;">
+                        <div class="events row row-content" style="min-height: 300px;">
+                            <h4 style="color: rgb(210, 70, 0);"><u>Community Service</u></h4>
+                            <p style="font-size: large;">Rotaract clubs bring together people ages 18 and older to exchange ideas with leaders in the community, develop leadership and professional skills, and have fun through service.<br>Community Service is the opportunity Rotaract Club of Fr.CRCE have to implement club projects and activities that improve life in the local community.</p>
+                        </div>
+                        <button class="btn btn-success" onclick="window.location.href='./events.html'">See More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10">
+                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/flagship-event-bg.png)">
+                    <img class="event-img col-12 col-sm-6" src="img/flagship-event.jpg" alt="" height="380px">
+                    <div class="events-col col-12 col-sm-6" style="text-align: center;">
+                        <div class="events row row-content" style="min-height: 300px;">
+                            <h4 style="color: rgb(210, 70, 0);"><u>Flagship Events</u></h4>
+                            <p style="font-size: large;">Every year Rotaract Club of FR.CRCE conducts some of their flagship events. These are included in the club service events of the Club. These events are the highlighted events of the Rotaract Club cause they are done with the intention to gather more number of masses, to increase the brotherhood amongst them and spread love in as much quantity as possible.</p>
+                        </div>
+                        <button class="btn btn-success" onclick="window.location.href='./events.html'">See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row row-content justify-content-center">
+            <div class="col-12">
+                <h2>Upcoming Events</h2>
+            </div>
+
+            <div class="container">
+                <div id="eventCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="cards-wrapper justify-content-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <dl class="row" style="padding-top: 4%;">
+                                            <dt class="col-3 offset-1">Event</dt>
+                                            <dd class="col-7">Name</dd>
+                                            <dt class="col-3 offset-1">Date</dt>
+                                            <dd class="col-7">3 Feb 2013.</dd>
+                                            <dt class="col-3 offset-1">Details</dt>
+                                            <dd class="col-7">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</dd>
+                                        </dl>
+                                        <div class="row justify-content-center">
+                                            <button class="col-10 col-sm-4 btn btn-primary">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <dl class="row" style="padding-top: 4%;">
+                                            <dt class="col-3 offset-1">Event</dt>
+                                            <dd class="col-7">Name</dd>
+                                            <dt class="col-3 offset-1">Date</dt>
+                                            <dd class="col-7">3 Feb 2013.</dd>
+                                            <dt class="col-3 offset-1">Details</dt>
+                                            <dd class="col-7">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</dd>
+                                        </dl>
+                                        <div class="row justify-content-center">
+                                            <button class="col-10 col-sm-4 btn btn-primary">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="cards-wrapper justify-content-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <dl class="row" style="padding-top: 4%;">
+                                            <dt class="col-3 offset-1">Event</dt>
+                                            <dd class="col-7">Name</dd>
+                                            <dt class="col-3 offset-1">Date</dt>
+                                            <dd class="col-7">3 Feb 2013.</dd>
+                                            <dt class="col-3 offset-1">Details</dt>
+                                            <dd class="col-7">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</dd>
+                                        </dl>
+                                        <div class="row justify-content-center">
+                                            <button class="col-10 col-sm-4 btn btn-primary">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <dl class="row" style="padding-top: 4%;">
+                                            <dt class="col-3 offset-1">Event</dt>
+                                            <dd class="col-7">Name</dd>
+                                            <dt class="col-3 offset-1">Date</dt>
+                                            <dd class="col-7">3 Feb 2013.</dd>
+                                            <dt class="col-3 offset-1">Details</dt>
+                                            <dd class="col-7">Event Details</dd>
+                                        </dl>
+                                        <div class="row justify-content-center">
+                                            <button class="col-10 col-sm-4 btn btn-primary">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h3 style="text-shadow: 2px 1px 1px  rgb(224, 192, 152); color: #800032;">Rotaract Club of CRCE</h3>
+                    <h4 style="text-shadow: 2px 1px 1px  rgb(224, 192, 152); color: #800032; text-align: center;">2022-23
+                        </h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./contactus.html">Contact Us</a></li>
+                        <li><a href="./report.html">Report</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address style="color: floralwhite;">
+                        Fr. Agnel Ashram, Bandstand<br>
+                        Bandra (W), Mumbai 400050.<br>
+                        MH, IN<br>
+                        <i style="color: pink;" class="fa fa-phone fa-lg"></i>: +91 9137835037/ +91 7798800444<br>
+                        <i style="color: pink;" class="fa fa-envelope fa-lg"></i>:
+                        <a href="mailto:rotaractcrce@gmail.com">rotaractcrce@gmail.com</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/rotaract_crce/?hl=en"><i class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/RCCRCE/"><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="footer-bottom">
+            <div class="col-auto">
+                <p>© Copyright <span style="color: maroon; font-weight:bold;">Rotaract Club of CRCE 2022-23</span>. designed by <span style="color: maroon; font-weight:bold;">Rtr. Jinish Varaiya</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Little Canvas things
+        var canvas = document.querySelector("#canvas"),
+            ctx = canvas.getContext('2d');
+
+        // Set Canvas to be window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Configuration, Play with these
+        var config = {
+            particleNumber: 800,
+            maxParticleSize: 10,
+            maxSpeed: 40,
+            colorVariation: 50
+        };
+
+        // Colors
+        var colorPalette = {
+            bg: { r: 110, g: 0, b: 10 },
+            matter: [
+                { r: 36, g: 18, b: 42 }, // darkPRPL
+                { r: 78, g: 36, b: 42 }, // rockDust
+                { r: 252, g: 178, b: 96 }, // solorFlare
+                { r: 253, g: 238, b: 152 } // totesASun
+            ]
+        };
+
+        // Some Variables hanging out
+        var particles = [],
+            centerX = canvas.width / 2,
+            centerY = canvas.height / 2,
+            drawBg,
+
+            // Draws the background for the canvas, because space
+            drawBg = function (ctx, color) {
+                ctx.fillStyle = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            };
+
+        // Particle Constructor
+        var Particle = function (x, y) {
+            // X Coordinate
+            this.x = x || Math.round(Math.random() * canvas.width);
+            // Y Coordinate
+            this.y = y || Math.round(Math.random() * canvas.height);
+            // Radius of the space dust
+            this.r = Math.ceil(Math.random() * config.maxParticleSize);
+            // Color of the rock, given some randomness
+            this.c = colorVariation(colorPalette.matter[Math.floor(Math.random() * colorPalette.matter.length)], true);
+            // Speed of which the rock travels
+            this.s = Math.pow(Math.ceil(Math.random() * config.maxSpeed), .7);
+            // Direction the Rock flies
+            this.d = Math.round(Math.random() * 360);
+        };
+
+        // Provides some nice color variation
+        // Accepts an rgba object
+        // returns a modified rgba object or a rgba string if true is passed in for argument 2
+        var colorVariation = function (color, returnString) {
+            var r, g, b, a, variation;
+            r = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.r);
+            g = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.g);
+            b = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.b);
+            a = Math.random() + .5;
+            if (returnString) {
+                return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+            } else {
+                return { r, g, b, a };
+            }
+        };
+
+        // Used to find the rocks next point in space, accounting for speed and direction
+        var updateParticleModel = function (p) {
+            var a = 180 - (p.d + 90); // find the 3rd angle
+            p.d > 0 && p.d < 180 ? p.x += p.s * Math.sin(p.d) / Math.sin(p.s) : p.x -= p.s * Math.sin(p.d) / Math.sin(p.s);
+            p.d > 90 && p.d < 270 ? p.y += p.s * Math.sin(a) / Math.sin(p.s) : p.y -= p.s * Math.sin(a) / Math.sin(p.s);
+            return p;
+        };
+
+        // Just the function that physically draws the particles
+        // Physically? sure why not, physically.
+        var drawParticle = function (x, y, r, c) {
+            ctx.beginPath();
+            ctx.fillStyle = c;
+            ctx.arc(x, y, r, 0, 2 * Math.PI, false);
+            ctx.fill();
+            ctx.closePath();
+        };
+
+        // Remove particles that aren't on the canvas
+        var cleanUpArray = function () {
+            particles = particles.filter((p) => {
+                return (p.x > -100 && p.y > -100);
+            });
+        };
+
+
+        var initParticles = function (numParticles, x, y) {
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle(x, y));
+            }
+            particles.forEach((p) => {
+                drawParticle(p.x, p.y, p.r, p.c);
+            });
+        };
+
+        // That thing
+        window.requestAnimFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+
+        // Our Frame function
+        var frame = function () {
+            // Draw background first
+            drawBg(ctx, colorPalette.bg);
+            // Update Particle models to new position
+            particles.map((p) => {
+                return updateParticleModel(p);
+            });
+            // Draw em'
+            particles.forEach((p) => {
+                drawParticle(p.x, p.y, p.r, p.c);
+            });
+            // Play the same song? Ok!
+            window.requestAnimFrame(frame);
+        };
+
+        // Click listener
+        document.body.addEventListener("click", function (event) {
+            var x = event.clientX,
+                y = event.clientY;
+            cleanUpArray();
+            initParticles(config.particleNumber, x, y);
+        });
+
+        // First Frame
+        frame();
+
+        // First particle explosion
+        initParticles(config.particleNumber);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
