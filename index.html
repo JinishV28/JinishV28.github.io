@@ -13,363 +13,29 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-
-        .about-span {
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            background-image: url("img/about-span-bg.png");
-            margin: 2%;
-            font-weight: bold;
-            font-size: xx-large;
-            text-align: center;
-        }
-        .about-span p{
-            opacity: 0.75;
-        }
-        .card {
-            position: relative;
-            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-            padding: 0%;
-            top: 0;
-            transition: top ease 0.5s;
-        }
-
-        .card:hover {
-            top: -15px;
-        }
-
-        @media screen and (min-width: 951px) {
-            .cards-wrapper {
-                display: flex;
-            }
-
-            .card {
-                margin: 5em 2em;
-                width: calc(100%/3);
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                background-color: #000000;
-                width: 7vh;
-                height: 7vh;
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-
-        @media screen and (max-width: 950px) {
-            .cards-wrapper {
-                display: flex;
-            }
-
-            .card {
-                margin: 5em 2em;
-                width: calc(100%/2);
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                background-color: #000000;
-                width: 7vh;
-                height: 7vh;
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .cards-wrapper {
-                display: flex;
-            }
-
-            .card:not(:first-child) {
-                display: none;
-            }
-
-            .card {
-                margin: 3em 2em;
-                width: calc(100%/1.5);
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                background-color: #000000;
-                width: 3vh;
-                height: 3vh;
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-
-        @media screen and (max-width: 492px) {
-            .cards-wrapper {
-                display: flex;
-            }
-
-            .card:not(:first-child) {
-                display: none;
-            }
-
-            .card {
-                margin: 3em 2em;
-                width: 100%;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                background-color: #000000;
-                width: 3vh;
-                height: 3vh;
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-
-        h1 {
-            text-align: center;
-            animation: fadein 2s;
-        }
-
-        h1 span {
-            font-family: 'Caesar Dressing', cursive;
-            font-size: 1.25em;
-            cursor: pointer;
-            text-transform: uppercase;
-            vertical-align: middle;
-            letter-spacing: .2em;
-        }
-
-        .fire {
-            animation: animation 1s ease-in-out infinite alternate;
-            -moz-animation: animation 1s ease-in-out infinite alternate;
-            -webkit-animation: animation 1s ease-in-out infinite alternate;
-            -o-animation: animation 1s ease-in-out infinite alternate;
-        }
-
-        .burn {
-            animation: animation .65s ease-in-out infinite alternate;
-            -moz-animation: animation .65s ease-in-out infinite alternate;
-            -webkit-animation: animation .65s ease-in-out infinite alternate;
-            -o-animation: animation .65s ease-in-out infinite alternate;
-        }
-
-        @keyframes animation {
-            0% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #feec85,
-                    -20px -20px 40px #ffae34,
-                    20px -40px 50px #ec760c,
-                    -20px -60px 60px #cd4606,
-                    0 -80px 70px #973716,
-                    10px -90px 80px #451b0e;
-            }
-
-            100% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #fefcc9,
-                    -20px -20px 40px #feec85,
-                    22px -42px 60px #ffae34,
-                    -22px -58px 50px #ec760c,
-                    0 -82px 80px #cd4606,
-                    10px -90px 80px #973716;
-            }
-        }
-
-        @-moz-keyframes animation {
-            0% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #feec85,
-                    -20px -20px 40px #ffae34,
-                    20px -40px 50px #ec760c,
-                    -20px -60px 60px #cd4606,
-                    0 -80px 70px #973716,
-                    10px -90px 80px #451b0e;
-            }
-
-            100% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #fefcc9,
-                    -20px -20px 40px #feec85,
-                    22px -42px 60px #ffae34,
-                    -22px -58px 50px #ec760c,
-                    0 -82px 80px #cd4606,
-                    10px -90px 80px #973716;
-            }
-        }
-
-        @-webkit-keyframes animation {
-            0% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #feec85,
-                    -20px -20px 40px #ffae34,
-                    20px -40px 50px #ec760c,
-                    -20px -60px 60px #cd4606,
-                    0 -80px 70px #973716,
-                    10px -90px 80px #451b0e;
-            }
-
-            100% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #fefcc9,
-                    -20px -20px 40px #feec85,
-                    22px -42px 60px #ffae34,
-                    -22px -58px 50px #ec760c,
-                    0 -82px 80px #cd4606,
-                    10px -90px 80px #973716;
-            }
-        }
-
-        @-o-keyframes animation {
-            0% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #feec85,
-                    -20px -20px 40px #ffae34,
-                    20px -40px 50px #ec760c,
-                    -20px -60px 60px #cd4606,
-                    0 -80px 70px #973716,
-                    10px -90px 80px #451b0e;
-            }
-
-            100% {
-                text-shadow: 0 0 20px #fefcc9,
-                    10px -10px 30px #fefcc9,
-                    -20px -20px 40px #feec85,
-                    22px -42px 60px #ffae34,
-                    -22px -58px 50px #ec760c,
-                    0 -82px 80px #cd4606,
-                    10px -90px 80px #973716;
-            }
-        }
-
-        .row-content {
-            border: none;
-        }
-
-        .card {
-            border: none;
-        }
-
-        .card-header {
-            background-color: #391285;
-            color: white;
-        }
-
-        .card-body {
-            background-color: #FEFEFE;
-            padding: 0%;
-        }
-
-        .events {
-            border: none;
-        }
-
-        .event-img {
-            border-radius: 2rem;
-            margin-top: 0%;
-        }
-
-        .event-img,
-        .events-col {
-            padding: 0%;
-        }
-
-        .theme-col {
-            border-radius: 2rem;
-        }
-
-        .btn-success {
-            margin-bottom: 2%;
-        }
-
-        .btn-primary {
-            margin-bottom: 2%;
-        }
-
-        .home-head {
-            position: relative;
-            padding: 15%;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            z-index: 1;
-            font-weight: 1200;
-            font-size: 70px;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, gold, rgb(224, 179, 125));
-            background-repeat: round;
-            background-size: 80%;
-            animation: animate 7s infinite;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: rgba(255, 255, 255, 0);
-        }
-
-        h2 {
-            animation: fadein 1s;
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-up {
-            0% {
-                transform: translateY(200px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes animate {
-            100% {
-                background-position: 500%;
-            }
-        }
-
-        @keyframes slide-right {
-            from {
-                margin-right: 100%;
-                width: 100%;
-            }
-
-            to {
-                margin-right: 0%;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand mr-auto" href="#" style="margin-left: 3%;"><img src="./img/ppt logo.png" height="60" width="60"></a>
-        <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="./report.html">Report</a></li>
-            </ul>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <audio id="audio" style="z-index: 0;">
+                <source src="https://css-tricks.com/examples/SoundOnHover/audio/beep.ogg"/>
+            </audio>
+            <a class="navbar-brand" href="#"><img src="./img/ppt logo.png" height="60" width="60"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./report.html">Report</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="q">
@@ -378,11 +44,11 @@
     </div>
 
     <div class="container">
-        <div style="margin-top: 18%;">
+        <div style="margin-top: 16%;">
             <h1><span style="color: rgb(0, 0, 0);" class="fire">K</span><span style="color: rgb(40, 0, 0);" class="burn">A</span><span style="color: rgb(65, 0, 0);" class="burn">I</span><span style="color: rgb(92, 0, 0);" class="fire">Z</span></span><span style="color: rgb(109, 0, 0);" class="fire">E</span></span><span style="color: rgb(128, 0, 0);" class="fire">N</span></h1>
         </div>
-        <div class="row justify-content-center">
-            <div class="theme-col col-7" style="background-image: url(img/theme-bg3.png); margin: 2%;">
+        <div class="row justify-content-center" style="margin-bottom: 5%;">
+            <div class="theme-col col-7" style="background-image: url(img/index/theme.webp); margin: 2%;">
                 <p style="font-weight: bold; font-size: large; justify-content: center;">
                     The Rotaract Club of CRCE has been an integral part of Fr.CRCE. Our theme for the year 2022-2023<span style="text-align: center; padding-top: 1%; color: maroon; text-shadow: 2px 2px rgb(224, 192, 152);;">
                     Kaizen</span> helped us hussle for the continuous improvement within us and do what we do best as Rotaractors.We work along the motto <span style="color: maroon;">Change For Better</span>.
@@ -393,9 +59,9 @@
             <h2 class="about-div">About Us</h2>
             <div class="row row-content justify-content-center" style="border: none;">
                 <div class="row justify-content-center" style="margin-bottom: 5%;">
-                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkmagenta;">20+</span><br>Events Organised</p></span>
-                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkgreen">2000+</span><br>People Connected</p></span>
-                    <span class="about-span"><p style="margin-top: 5%; color: teal"><span style="color: darkblue">200+</span><br>Donations To Councils</p></span>
+                    <span class="about-span" style="background-image:url(img/index/about-us-bg1.jpg)"></span>
+                    <span class="about-span" style="background-image:url(img/index/about-us-bg2.jpg)"></span>
+                    <span class="about-span" style="background-image:url(img/index/about-us-bg3.jpg)"></span>
                 </div>
                 <p class="col-10" style="font-size:large;">The purpose of Rotaract is to provide an opportunity for young men and woman to enhance the knowledge and skills that will assist them in personal development, to address the physical and social needs of their communities, and to promote better relationships between all people worldwide, through a framework of friendship and service..<a href="./AboutUs.html" style="font-weight: bold; color: gray; text-decoration: none;">Read More</a></p>
             </div>
@@ -405,8 +71,8 @@
                 <h2>Events</h2>
             </div>
             <div class="col-10">
-                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/community-serv-bg.png);">
-                    <img class="event-img col-12 col-sm-6" src="img/commuity service.jpg" alt="" height="380px">
+                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/index/community-serv-bg.webp);">
+                    <img class="event-img col-12 col-sm-6" src="img/index/commuity service.webp" alt="" height="380px">
                     <div class="events-col col-12 col-sm-6" style="text-align: center;">
                         <div class="events row row-content" style="min-height: 300px;">
                             <h4 style="color: rgb(210, 70, 0);"><u>Community Service</u></h4>
@@ -418,8 +84,8 @@
             </div>
 
             <div class="col-10">
-                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/flagship-event-bg.png)">
-                    <img class="event-img col-12 col-sm-6" src="img/flagship-event.jpg" alt="" height="380px">
+                <div class="row" style="margin-top:5%; border-radius: 2rem; background-image: url(img/index/flagship-event-bg.webp)">
+                    <img class="event-img col-12 col-sm-6" src="img/index/flagship-event.webp" alt="" height="380px">
                     <div class="events-col col-12 col-sm-6" style="text-align: center;">
                         <div class="events row row-content" style="min-height: 300px;">
                             <h4 style="color: rgb(210, 70, 0);"><u>Flagship Events</u></h4>
@@ -445,7 +111,7 @@
                             <div class="cards-wrapper justify-content-center">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <img src="img/index/coming-soon.webp" width="100%" height="200px">
                                         <dl class="row" style="padding-top: 4%;">
                                             <dt class="col-3 offset-1">Event</dt>
                                             <dd class="col-7">Name</dd>
@@ -461,7 +127,7 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <img src="img/index/coming-soon.webp" width="100%" height="200px">
                                         <dl class="row" style="padding-top: 4%;">
                                             <dt class="col-3 offset-1">Event</dt>
                                             <dd class="col-7">Name</dd>
@@ -482,7 +148,7 @@
                             <div class="cards-wrapper justify-content-center">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <img src="img/index/coming-soon.webp" width="100%" height="200px">
                                         <dl class="row" style="padding-top: 4%;">
                                             <dt class="col-3 offset-1">Event</dt>
                                             <dd class="col-7">Name</dd>
@@ -498,17 +164,17 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="img/coming-soon.webp" width="100%" height="200px">
+                                        <img src="img/index/coming-soon.webp" width="100%" height="200px">
                                         <dl class="row" style="padding-top: 4%;">
                                             <dt class="col-3 offset-1">Event</dt>
                                             <dd class="col-7">Name</dd>
                                             <dt class="col-3 offset-1">Date</dt>
                                             <dd class="col-7">3 Feb 2013.</dd>
                                             <dt class="col-3 offset-1">Details</dt>
-                                            <dd class="col-7">Event Details</dd>
+                                            <dd class="col-7">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</dd>
                                         </dl>
                                         <div class="row justify-content-center">
-                                            <button class="col-10 col-sm-4 btn btn-primary">The details of the event will be uploaded soon once the event is announced to be conducted officially by the club members</button>
+                                            <button class="col-10 col-sm-4 btn btn-primary">Register</button>
                                         </div>
                                     </div>
                                 </div>
@@ -565,6 +231,7 @@
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
+                        Let's Connect:<br><br>
                         <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/rotaract_crce/?hl=en"><i class="fa fa-instagram"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/RCCRCE/"><i
                                 class="fa fa-facebook"></i></a>
@@ -579,7 +246,7 @@
         <br>
         <div class="footer-bottom">
             <div class="col-auto">
-                <p>© Copyright <span style="color: maroon; font-weight:bold;">Rotaract Club of CRCE 2022-23</span>. designed by <span style="color: maroon; font-weight:bold;">Rtr. Jinish Varaiya</span></p>
+                <p style="font-size:large;"> Developed By <span><a style="color: maroon; font-weight:bold; text-decoration: none;" href="https://www.linkedin.com/in/jinish-varaiya-19aba6168/">Rtr. Jinish Varaiya</a></span></p>
             </div>
         </div>
     </footer>
@@ -732,9 +399,10 @@
         // First particle explosion
         initParticles(config.particleNumber);
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

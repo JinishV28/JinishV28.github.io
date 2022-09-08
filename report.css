@@ -1,0 +1,19 @@
+.top {
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.paragraph {
+
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+}
+
+.row-content {
+    border: none;
+}

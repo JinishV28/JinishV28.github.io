@@ -1,0 +1,26 @@
+.jumbotron {
+    margin: 0px auto;
+    background-color: rgb(25, 7, 7);
+}
+.team-post{
+    text-align: center;
+    font-size: medium;
+}
+.team-names{
+    margin-top: 10%;
+}
+.card{
+    background-color: #1B1B1B;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(78, 78, 78, 0.875);
+}
+.centered{
+    position: absolute;  
+    word-spacing: 30px;
+    color: #5a46b2c9;
+    top: 40%;
+    left: 30%;
+}
+.row-content{
+    border: none;
+}

@@ -10,65 +10,38 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="report.css">
 
-        <style>
-            .top{
-                font-weight: bolder;
-                text-align: center;
-                padding: 10px;
-                margin-top: 10px;
-            }
-            .paragraph{
-              
-                font-size: 20px;
-                text-align: justify;
-                padding-left: 5%;
-                padding-right: 5%;
-                padding-bottom: 3%;
-            }
-            @media screen and (max-width:800px){
-              .top{
-                font-size: 26px;
-                padding: 10px;
-              }
-              .paragraph{
-                font-size: 16px;
-              }
-            }
-            div.slide-left {
-                width:100%;
-                overflow:hidden;
-            }
-            div.slide-left p {
-                animation: slide-left 10s;
-            }
-            .row-content{
-                border: none;
-            }
-        </style>
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="./img/logo.png" height="30" width="41"></a>
-            <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Report</a></li>
-                </ul>
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <audio id="audio" style="z-index: 0;">
+                    <source src="https://css-tricks.com/examples/SoundOnHover/audio/beep.ogg"/>
+                </audio>
+                <a class="navbar-brand" href="#"><img src="./img/ppt logo.png" height="60" width="60"></a>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./report.html">Report</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
         <div class="container">
-            <h2 style="margin-top: 5%;">Report</h2>
             <div class="row row-content justify-content-center" style="margin-top: 2%;margin-bottom: 2%;">
-                <div class="col-10" style=" border-radius: 2rem; background-color: lightgoldenrodyellow">
+                <div class="col-12">
+                    <h2 style="margin-top: 5%; margin-bottom: 5%;">Report</h2>
+                </div>
+                <div class="col-12 col-md-10" style=" border-radius: 2rem; background-color: lightgoldenrodyellow">
                     <h1 class="top">Beach Clean Up</h1>
                 <p class="paragraph">
                     The Beach Clean-up was the first formal event held. It was conducted in collaboration with 'Change is us', on 24th October on the coasts of Girgaum Chowpatty. There were over 150 volunteers who participated in the cleanup drive. Our Beach cleanup project was like ripples in a pond. It aided in beach restoration and also prevented debris from flowing back into the sea. It helped to restore the beach while also preventing garbage from pouring back.
@@ -121,6 +94,7 @@
                     </div>
                     <div class="col-12 col-sm-4 align-self-center">
                         <div class="text-center">
+                            Let's Connect:<br><br>
                             <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/rotaract_crce/?hl=en"><i class="fa fa-instagram"></i></a>
                             <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/RCCRCE/"><i
                                     class="fa fa-facebook"></i></a>
@@ -135,10 +109,13 @@
             <br>
             <div class="footer-bottom">
                 <div class="col-auto">
-                    <p>© Copyright <span style="color: maroon; font-weight:bold;">Rotaract Club of CRCE 2022-23</span>. designed by <span style="color: maroon; font-weight:bold;">Rtr. Jinish Varaiya</span></p>
+                    <p style="font-size:large;"> Developed By <span><a style="color: maroon; font-weight:bold; text-decoration: none;" href="https://www.linkedin.com/in/jinish-varaiya-19aba6168/">Rtr. Jinish Varaiya</a></span></p>
                 </div>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
