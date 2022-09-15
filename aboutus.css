@@ -2,18 +2,72 @@
     margin: 0px auto;
     background-color: rgb(25, 7, 7);
 }
+
+.about-txtover {
+    color: rgb(255, 200, 0);
+    font-family: Roboto;
+    letter-spacing: 4px;
+    font-size: 4em;
+    text-shadow: 0 0 4px rgb(0 0 0 / 45%);
+}
+
+.about-txtover p {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+
+.about-image {
+    filter: brightness(45%);
+}
+
 .team-post{
     text-align: center;
-    font-size: medium;
+    font-size: large;
 }
 .team-names{
     margin-top: 10%;
+    text-shadow: 3px 3px 3px maroon;
 }
+
+.team-social .btn-social-icon{
+    border: none;
+    border-radius: 2rem;
+    margin-top: 5%;
+}
+
+.team-body{
+    position: relative;
+}
+
+.team-social{
+    position: absolute;
+    bottom: 0%;
+    opacity: 0.75;
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    height: 25%;
+    width: 100%;
+    display: none;
+}
+
 .card{
     background-color: #1B1B1B;
     color: white;
     box-shadow: 0 4px 8px 0 rgba(78, 78, 78, 0.875);
 }
+
+.card:hover .team-social{
+    display: block;
+}
+
+.team-social .btn-social-icon:hover{
+    background-color: lightpink;
+    box-shadow: none;
+}
+
 .centered{
     position: absolute;  
     word-spacing: 30px;
@@ -23,4 +77,19 @@
 }
 .row-content{
     border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron{
+        height: 300px;
+    }
+    .about-image {
+        height: 300px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 390px) {
+    .about-txtover p {
+        top: 20%;
+    }
 }

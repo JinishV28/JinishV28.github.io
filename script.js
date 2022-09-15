@@ -1,4 +1,4 @@
 var audio = $("#audio")[0];
-$(".nav-link, .navbar-brand, .btn-social-icon").mouseenter(function () {
+$("").mouseenter(function () {
     audio.play();
 });

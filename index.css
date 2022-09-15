@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
+.q{
+    cursor: pointer;
+}
+
 canvas {
     position: absolute;
     width: 100%;
@@ -9,19 +13,29 @@ canvas {
 }
 
 .about-span {
+    cursor: default;
+    position: relative;
+    background-image: url(img/index/about-us-span.webp);
+    filter: brightness(90%);
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background-image: url("img/index/about-span-bg.webp");
     margin: 2%;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding-top: 1%;
+    font-family: Roboto;
     font-weight: bold;
     font-size: xx-large;
     text-align: center;
-    animation: slide-up 5s;
 }
 
-.about-span p {
-    opacity: 0.75;
+.about-span:hover{
+    filter: brightness(100%);
+}
+
+.cards-wrapper {
+    display: flex;
 }
 
 .card {
@@ -30,59 +44,42 @@ canvas {
     padding: 0%;
     top: 0;
     transition: top ease 0.5s;
+    margin: 5em 2em;
+    width: calc(100%/3);
 }
 
 .card:hover {
     top: -15px;
 }
 
-@media screen and (min-width: 951px) {
-    .cards-wrapper {
-        display: flex;
-    }
-
-    .card {
-        margin: 5em 2em;
-        width: calc(100%/3);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        background-color: #000000;
-        width: 7vh;
-        height: 7vh;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #000000;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-@media screen and (max-width: 950px) {
-    .cards-wrapper {
-        display: flex;
+@media (min-width: 768px) and (max-width: 991.5px) {
+    .card:not(:first-child) {
+        display: none;
     }
 
     .card {
-        margin: 5em 2em;
         width: calc(100%/2);
     }
 
     .carousel-control-prev,
     .carousel-control-next {
-        background-color: #000000;
-        width: 7vh;
-        height: 7vh;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 5vh;
+        height: 5vh;
     }
+
 }
 
-@media screen and (max-width: 768px) {
-    .cards-wrapper {
-        display: flex;
-    }
-
+@media (max-width: 767.5px) {
     .card:not(:first-child) {
         display: none;
     }
@@ -100,14 +97,6 @@ canvas {
         border-radius: 50%;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    canvas {
-        position: absolute;
-        width: 100%;
-        height: 65%;
-        z-index: 0;
-        margin: 0;
     }
 }
 
@@ -127,12 +116,29 @@ canvas {
 
     .carousel-control-prev,
     .carousel-control-next {
-        background-color: #000000;
         width: 3vh;
         height: 3vh;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .q {
+        height: 540px;
+        z-index: 1;
+    }
+    .home-head{
+      padding-top: 50%;
+      z-index: 1;
+    }
+    canvas {
+      height: 500px;
+     
+    }
+  }
+
+@media screen and (min-width: 992px) {
+    .event-img {
+        border-top-right-radius: 45%;
     }
 }
 
@@ -271,12 +277,26 @@ h1 span {
     background-image: url("img/index/card-bg.webp");
 }
 
+.reg-btn1:hover span{
+    display: none;
+}
+
+.reg-btn1:hover::before{
+    content: "Closed";
+}
+
+.reg-btn1:hover{
+    background-color: red;
+    border-color: red;
+}
+
 .events {
     border: none;
 }
 
 .event-img {
-    border-radius: 2rem;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
     margin-top: 0%;
 }
 
@@ -285,12 +305,32 @@ h1 span {
     padding: 0%;
 }
 
-.theme-col {
-    border-radius: 2rem;
+.events-btn {
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: white;
+    border: 2px solid;
 }
 
-.btn-success {
-    margin-bottom: 2%;
+.events-btn:hover {
+    background-color: rgb(255, 196, 0);
+    color: white;
+    border-color: rgb(255, 196, 0);
+}
+
+.gallery-pic .btn {
+    margin-top: 2%;
+    font-weight: bold;
+    color: teal;
+    border: 2px solid;
+    border-radius: 5rem;
+    padding: 10px 20px;
+}
+
+.gallery-pic .btn:hover {
+    background-color: teal;
+    border-color: teal;
+    color: white;
 }
 
 .btn-primary {
@@ -299,16 +339,19 @@ h1 span {
 
 .home-head {
     position: relative;
-    padding: 15%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     z-index: 1;
     font-weight: 1200;
     font-size: 70px;
     letter-spacing: 2px;
-    background: linear-gradient(90deg, gold, rgb(224, 179, 125));
+    background: linear-gradient(90deg, white, rgb(224, 179, 125));
+    text-shadow: 3px 3px 8px gold;
     background-repeat: round;
     background-size: 80%;
-    animation: animate 7s infinite;
+    animation: animate 3s infinite;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
