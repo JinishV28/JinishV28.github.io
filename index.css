@@ -351,8 +351,8 @@ h1 span {
     font-weight: 1200;
     font-size: 70px;
     letter-spacing: 2px;
-    background: linear-gradient(90deg, white, rgb(224, 179, 125));
-    text-shadow: 3px 3px 8px gold;
+    background: linear-gradient(90deg,rgb(247, 247, 152), gold, rgb(255, 174, 0));
+    text-shadow: 3px 3px 15px lightgoldenrodyellow;
     background-repeat: round;
     background-size: 80%;
     animation: animate 3s infinite;
