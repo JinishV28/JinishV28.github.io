@@ -34,22 +34,25 @@ canvas {
     filter: brightness(100%);
 }
 
-.cards-wrapper {
-    display: flex;
+.carousel-inner {
+    padding-top: 4em;
+    margin-right: 2%;
 }
 
 .card {
     position: relative;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    padding: 0%;
     top: 0;
     transition: top ease 0.5s;
-    margin: 5em 2em;
-    width: calc(100%/3);
 }
 
-.card:hover {
+.card:hover{
     top: -15px;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 200px;
 }
 
 .carousel-control-prev,
@@ -62,68 +65,6 @@ canvas {
     transform: translateY(-50%);
 }
 
-@media (min-width: 768px) and (max-width: 991.5px) {
-    .card:not(:first-child) {
-        display: none;
-    }
-
-    .card {
-        width: calc(100%/2);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 5vh;
-        height: 5vh;
-    }
-
-}
-
-@media (max-width: 767.5px) {
-    .card:not(:first-child) {
-        display: none;
-    }
-
-    .card {
-        margin: 3em 2em;
-        width: calc(100%/1.5);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        background-color: #000000;
-        width: 3vh;
-        height: 3vh;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-@media screen and (max-width: 492px) {
-    .cards-wrapper {
-        display: flex;
-    }
-
-    .card:not(:first-child) {
-        display: none;
-    }
-
-    .card {
-        margin: 3em 2em;
-        width: 100%;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 3vh;
-        height: 3vh;
-    }
-
-    h1 span {
-        font-size: 1.25em;
-    }
-}
 
 @media screen and (max-width: 1100px) {
     .q {
@@ -143,6 +84,42 @@ canvas {
 @media screen and (min-width: 992px) {
     .event-img {
         border-top-right-radius: 45%;
+    }
+
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        padding: 0 1.5em;
+        margin-right: 0%;
+        flex: 0 0 calc(100%/3);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.5px){
+    .card {
+        margin-left: 20%;
+        width: 60%;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: 5vh;
+        height: 5vh;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 575.5px){
+    .card {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 575.5px){
+    .carousel-control-next, .carousel-control-prev{
+        width: 3vh;
+        height: 3vh;
     }
 }
 
@@ -281,6 +258,15 @@ h1 span {
     background-image: url("img/index/card-bg.webp");
 }
 
+.reg-btn {
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: purple;
+    border: 2px solid;
+    border-radius: 5rem;
+    padding: 1% 3%;
+}
+
 .reg-btn1:hover span{
     display: none;
 }
@@ -292,6 +278,35 @@ h1 span {
 .reg-btn1:hover{
     background-color: red;
     border-color: red;
+    color: white;
+}
+
+.reg-btn2:hover span{
+    display: none;
+}
+
+.reg-btn2:hover::before{
+    content: "Open";
+}
+
+.reg-btn2:hover{
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+
+.reg-btn3:hover span{
+    display: none;
+}
+
+.reg-btn3:hover::before{
+    content: "Awaited";
+}
+
+.reg-btn3:hover{
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+    color: white;
 }
 
 .events {
@@ -355,7 +370,7 @@ h1 span {
     text-shadow: 3px 3px 15px lightgoldenrodyellow;
     background-repeat: round;
     background-size: 80%;
-    animation: animate 3s infinite;
+    animation: animate 2s infinite;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);

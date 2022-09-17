@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Roboto;
+    src: url("/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family:  OpenSans;
+    src: url("/OpenSans-Regular.ttf");
+}
+
 h2 {
     background-image: url("img/heading-bg.webp");
     color: floralwhite;
@@ -5,6 +15,8 @@ h2 {
     border-radius: 25px;
     padding-bottom: 1%;
     padding-top: 1%;
+    font-family: OpenSans;
+    font-weight: bolder;
 }
 
 .navbar {
@@ -88,14 +100,4 @@ footer {
 li a,
 address a {
     color: teal;
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url("/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family:  OpenSans;
-    src: url("/OpenSans-Regular.ttf");
 }
