@@ -37,6 +37,7 @@ canvas {
 .carousel-inner {
     padding-top: 4em;
     margin-right: 2%;
+    padding-right: 2%;
 }
 
 .card {
@@ -120,6 +121,10 @@ canvas {
     .carousel-control-next, .carousel-control-prev{
         width: 3vh;
         height: 3vh;
+    }
+
+    .carousel-item {
+        padding: 0 1em;
     }
 }
 
