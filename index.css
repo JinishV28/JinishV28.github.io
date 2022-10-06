@@ -263,7 +263,7 @@ h1 span {
     background-image: url("img/index/card-bg.webp");
 }
 
-.reg-btn {
+.reg-btn1, .reg-btn2, .reg-btn3 {
     margin-bottom: 2%;
     font-weight: bold;
     color: purple;
