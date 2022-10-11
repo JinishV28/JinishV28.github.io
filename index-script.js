@@ -155,14 +155,14 @@ var scrollPosition = 0;
 if (window.matchMedia("(min-width: 991.5px)").matches) {
     $('.carousel-control-next').on('click', function () {
         if (scrollPosition < carouselWidth - cardWidth * 4) {
-            scrollPosition = scrollPosition + cardWidth;
+            scrollPosition = scrollPosition + cardWidth + 50;
             $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
         }
     });
 
     $('.carousel-control-prev').on('click', function () {
         if (scrollPosition > 0) {
-            scrollPosition = scrollPosition - cardWidth;
+            scrollPosition = scrollPosition - cardWidth - 50;
             $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
         }
     });
