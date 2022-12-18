@@ -58,9 +58,9 @@ canvas {
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: #000000;
-    width: 7vh;
-    height: 7vh;
+    background-color: black;
+    width: 5vh;
+    height: 5vh;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -69,7 +69,7 @@ canvas {
 
 @media screen and (max-width: 1100px) {
     .q {
-        height: 540px;
+        height: 500px;
         z-index: 1;
     }
     .home-head{
@@ -348,7 +348,7 @@ h1 span {
     color: teal;
     border: 2px solid;
     border-radius: 5rem;
-    padding: 1% 3%;
+    padding: 0.5% 3%;
 }
 
 .gallery-pic .btn:hover {
@@ -361,7 +361,30 @@ h1 span {
     margin-bottom: 2%;
 }
 
+.feedback-form input,.feedback-form textarea{
+     background-color: transparent;
+     border: 3px solid rgb(25, 25, 108);
+}
+.feedback-form input:enabled,.feedback-form textarea:enabled{
+    background-color: transparent;
+    color: whitesmoke;
+}
+.feedback-form button{
+    background-color: rgb(25, 25, 108);
+    color: whitesmoke;
+}
+.feedback-form button:hover{
+    border: none;
+    background-color: blue;
+    color: whitesmoke
+}
+
+.feedback-form input::placeholder, .feedback-form textarea::placeholder{
+    color: aliceblue;
+}
+
 .home-head {
+    margin-bottom: 0;
     position: relative;
     padding-top: 15%;
     padding-bottom: 15%;

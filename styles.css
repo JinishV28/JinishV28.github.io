@@ -8,6 +8,13 @@
     src: url("/OpenSans-Regular.ttf");
 }
 
+html,body
+{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 h2 {
     background-image: url("img/heading-bg.webp");
     color: floralwhite;
@@ -29,13 +36,13 @@ h2 {
 
 nav ul {
     margin-right: 40px;
+    padding: 1%;
 }
 
 .navbar-nav li a {
     font-weight: bold;
     color: white;
     text-shadow: -2px 2px maroon;
-    padding: 7%;
 }
 
 .navbar-nav li a:hover {
@@ -43,6 +50,12 @@ nav ul {
     color: rgb(224, 192, 152);
     box-shadow: 0px 0px 3px 3px lightgoldenrodyellow;
     border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar-nav li a{
+        padding: 4%;
+    }
 }
 
 .navbar li {
@@ -79,24 +92,27 @@ body {
 footer {
     background-color: black;
     color: rgb(255, 196, 0);
-    margin: 0px auto;
     padding: 20px 0px 20px 0px;
 }
 
-.footer-bottom {
-    background: lightgray;
-    color: black;
-    padding: 10px 0px;
-    margin-bottom: 0%;
-    width: 100%;
+.footer-end {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+    border-top-style: ridge;
+    color: white;
+    font-size: large;
     text-align: center;
+    padding: 20px 0 0;
 }
 
-.footer-bottom a:hover {
-    text-shadow: 2px 2px rgb(224, 192, 152);
+.footer-end a{
+    text-decoration: none;
+    color: rgb(224, 192, 152);
+}
+.footer-end a:hover {
+    color: rgb(255, 196, 0);
 }
 
-li a,
-address a {
-    color: teal;
+footer a, footer p{
+    text-decoration: none;
+    color: lightyellow;
 }
