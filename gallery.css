@@ -1,4 +1,5 @@
-.grid { 
+.grid {
+    padding: 0 10px; 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 20px;
@@ -12,7 +13,6 @@
   }
 .grid-item img:hover{
     transform:scale(1.02);
-    
 }
   .grid-item .text{
     opacity:0;
@@ -31,4 +31,12 @@
 
 .grid-item:hover .text{
     opacity:1;
+    transform: scale(1.02);
+}
+
+@media screen and (max-width:992px) {
+  .grid-item{
+     width: 340px;
+     height: 360px;
+  }
 }
