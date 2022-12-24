@@ -41,31 +41,54 @@
         <h2 style="margin: 5%;">Gallery</h2>
         <h1 style="font-family: Roboto; display: none;"><u>2021-22</u></h1>
     </div>
-    <div class="grid">
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/beach-cleanup.webp" alt="Sample photo">
-            <p class="text">Beach Clean Up</p>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/gallery/2021-22/beach-cleanup.webp" alt="" width="100%" height="auto" class="gallery-img" />
+                <div class="text">
+                    <p>Beach Clean Up</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/gallery/2021-22/felcitation.webp" alt="">
+                <div class="text">
+                    <p>Felicitation</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/gallery/2021-22/footslog.webp" alt="">
+                <div class="text">
+                    <p>Foot Slog</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/gallery/2021-22/mic-drop.webp" alt="">
+                <div class="text">
+                    <p>Mic Drop</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/gallery/2021-22/mic-drop2.webp" alt="">
+                <div class="text">
+                    <p>Mic Drop</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./img/gallery/2021-22/footslog2.webp" alt="">
+                <div class="text">
+                    <p>Foot Slog</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
         </div>
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/felcitation.webp" alt="Sample photo">
-            <p class="text">Felicitation</p>
-        </div>
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/mic-drop.webp" alt="Sample photo">
-            <p class="text">Mic Drop 2022</p>
-        </div>
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/footslog.webp" alt="Sample photo">
-            <p class="text">Footslog 2022</p>
-        </div>
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/footslog2.webp" alt="Sample photo">
-            <p class="text">Footslog 2022</p>
-        </div>
-        <div class="grid-item">
-            <img src="/img/gallery/2021-22/mic-drop2.webp" alt="Sample photo">
-            <p class="text">Mic Drop 2022</p>
-        </div>
+      </div>
     </div>
 
     <footer>
@@ -127,6 +150,15 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".gallery-img").click(function(){
+                var t = $(this).attr("src");
+                $(".modal-body").html("<img src='"+t+"' class='modal-img'>");
+                $("#myModal").modal();
+            });
+        });
+    </script>
 </body>
 
 </html>
