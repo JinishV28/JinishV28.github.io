@@ -39,9 +39,8 @@
 
     <div class="col-12" style="padding: 30px 0px;">
         <h2 style="margin: 5%;">Gallery</h2>
-        <h1 style="font-family: Roboto; display: none;"><u>2021-22</u></h1>
     </div>
-    <div class="container">
+    <div class="container" style="margin-bottom: 7%;">
         <div class="gallery">
             <div class="gallery-item">
                 <img src="img/gallery/2021-22/beach-cleanup.webp" alt="" width="100%" height="auto" class="gallery-img" />
@@ -152,9 +151,8 @@
     <script src="script.js"></script>
     <script>
         $(document).ready(function () {
-            $(".gallery-img").click(function(){
-                var t = $(this).attr("src");
-                $(".modal-body").html("<img src='"+t+"' class='modal-img'>");
+            $(".gallery-item").click(function(){
+                $(".modal-body").html("<p>hello world</p>");
                 $("#myModal").modal();
             });
         });

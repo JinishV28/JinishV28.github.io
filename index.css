@@ -12,6 +12,13 @@ canvas {
     margin: 0;
 }
 
+#aboutUs{
+    background-image: linear-gradient( 90deg, rgba(30, 30, 81, 0.5), rgba(30, 30, 81, 0.8)),  url('./img/index/Fr._CRCE.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 .about-span {
     cursor: default;
     position: relative;
@@ -65,7 +72,6 @@ canvas {
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 @media screen and (max-width: 1100px) {
     .q {
@@ -342,6 +348,36 @@ h1 span {
     border-color: rgb(255, 196, 0);
 }
 
+@media (max-width: 370px) and (min-width: 576.5px){
+    .gallery-pic img{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 577px) and (min-width: 768.5px){
+    .gallery-pic img{
+        height: 70vh;
+    }
+}
+
+@media (max-width: 769px) and (min-width: 992.5px){
+    .gallery-pic img{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 993px) and (min-width: 1199.5px){
+    .gallery-pic img{
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .gallery-pic img{
+        height: 800px;
+    }
+}
+
 .gallery-pic .btn {
     margin-top: 2%;
     font-weight: bold;
@@ -380,7 +416,7 @@ h1 span {
 }
 
 .feedback-form input::placeholder, .feedback-form textarea::placeholder{
-    color: aliceblue;
+    color: grey;
 }
 
 .home-head {
